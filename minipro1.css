@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+     font-family: "Poppins", sans-serif;
+}
+.hero{
+    color: #f26A8D;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    transition: all 1s ease-in;
+    /* backdrop-filter: blur(10px); */
+    /* filter: blur(8px);  */
+}
+span{
+    color: red;
+    font-size: 60px;
+}
+.hero:hover{
+    font-style: italic;
+    color: coral;
+}
+.hero p{
+    color:#42f5ef;
+    font-weight: 500;
+     animation-name: fontanimate2;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-direction:linear ;
+      box-shadow: 0px  2px 4px rgba(181, 143, 143, 0.2);
+      cursor: pointer;
+    
+}
+.hero h1{
+    color: rgb(255, 182, 203);
+    /* font-size: 65px; */
+      animation-name: fontanimate;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-direction: normal ;
+     box-shadow: 0px  2px 4px rgba(255,255,255,0.2);
+     cursor: pointer;
+     padding: 6px;
+     align-self: center;
+}
+
+@keyframes fontanimate{
+    from{
+        font-size: 50px;
+        color: #f26A8D;
+       
+    }
+    to{
+        font-size: 65px;
+        color: darkkhaki;
+         box-shadow: 0px  2px 4px rgba(255,255,255,0.2)
+    }
+}
+@keyframes fontanimate2{
+    from{
+        font-size: 25px;
+        color: #f26A8D;
+    }
+    to{
+        font-size: 35px;
+    }
+}
+.main_box{
+    background-image: url(photo.jpg);
+    backface-visibility: hidden;
+    height: 100vh;
+    background-size: cover;
+}
+.btn_one i{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    left: 16px;
+    line-height: 60px;
+    cursor: pointer;
+      transition: all 0.4 linear;
+    
+}
+.sidebar_menu{
+    position: fixed;
+    background-color: rgba(255,255,255,0.2);
+    height: 100vh;
+    width: 300px;
+    left: -300px;
+    box-shadow: 0 0 4px rgba(255,255,255,0.3);
+    transition: all 0.4 linear;
+}
+.sidebar_menu .logo{
+    position: absolute;
+    width: 100%;
+    line-height: 60px;
+    box-shadow: 0px 2px 4px rgba(255,255,255,0.5);
+    height: 60px;
+}
+.sidebar_menu .logo a{
+    position: absolute;
+    left: 55px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 450;
+}
+.sidebar_menu .menu{
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    font-weight: 500;
+}
+.sidebar_menu .btn_two i{
+    color: gray;
+    font-size: 25px;
+    position: absolute;
+    left:270px;
+    line-height: 60px;
+    /* opacity: 0; */
+    /* cursor: progress; */
+    cursor: pointer;
+    transition: all 0.4 linear;
+}
+.sidebar_menu .menu{
+    position: absolute;
+    width: 100%;
+    top: 80px;
+}
+.sidebar_menu .menu li i{
+    margin-top: 6px;
+    padding: 10px 19px;
+    line-height: 35px;
+    color: white;
+}
+.sidebar_menu .menu li  a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;   
+}
+.sidebar_menu .menu i{
+    padding-right: 8px;
+}
+.sidebar_menu .social_media{
+   position: absolute;
+   left: 25%;
+   bottom: 20px;
+}
+.sidebar_menu .social_media i{
+    color: white;
+    opacity: 0.5;
+    padding: 0 5px;
+}
+#check{
+    display: none;
+}
+.sidebar_menu .menu li:hover{
+     box-shadow:0 0 4px rgba(255,255,255,0.55);
+         border-left: 4px solid white;
+
+}
+.btn_one:hover i{
+    font-size: 40px;
+}
+.btn_two:hover i{
+    font-size: 30px;
+}
+.sidebar_menu .social_media i:hover{
+    opacity: 1;
+    transform: scale(1.2);
+}
+#check:checked ~.sidebar_menu{
+    left: 0;
+
+}
+#check:checked ~ .btn_one i{
+    opacity: 0;
+}
+
+#check:checked ~ .sidebar_menu .btn_two i{
+    opacity: 1;
+}
